@@ -1,7 +1,7 @@
 #  📋 Задание (amoCRM)
 
 ## 🔗 Github Pages
-[DEPLOY Live link](https://safym.github.io/amoCRM-timer/)
+[DEPLOY Live link](https://safym.github.io/amocrm-timer/)
 
 ## 📑 Требования:
 1. Написать реализацию таймера.
