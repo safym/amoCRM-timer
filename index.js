@@ -8,7 +8,7 @@ const MAX_SECONDS = 86400;
 
 // Получить функцию, которая анимирует таймер
 const createTimerAnimator = () => {
-  let timeoutlId;
+  let timeoutId;
 
   return (seconds) => {
     // Возврат если введенное значение меньше 0, равно 0 или пустое
@@ -26,17 +26,17 @@ const createTimerAnimator = () => {
     }
 
     // Сбросить таймаут если таймаут уже запущен
-    if (timeoutlId) clearTimeout(timeoutlId);
+    if (timeoutId) clearTimeout(timeoutId);
 
     // Уставновить таймаут с задержкой 0 для мгновенного запуска
     // и запускать вложенные таймауты через секунду для отсчета таймера
-    timeoutlId = setTimeout(function tick() {
+    timeoutId = setTimeout(function tick() {
       timerEl.innerHTML = getFormattedSeconds(seconds);
 
-      timeoutlId = setTimeout(tick, 1000);
+      timeoutId = setTimeout(tick, 1000);
 
       if (seconds === 0) {
-        clearTimeout(timeoutlId);
+        clearTimeout(timeoutId);
       }
 
       seconds--;
